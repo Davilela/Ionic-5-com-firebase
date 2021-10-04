@@ -23,7 +23,7 @@ export class RegisterPage implements OnInit {
     this.afAuth.createUserWithEmailAndPassword(user.email, user.password)
       .then((userCredential) => {
         const user = userCredential.user;
-        this.navCtrl.navigateForward('home');
+        this.navCtrl.navigateForward('login');
       })
       .catch((error) => {
       this.utilCtrl.showToast(error.message);
